@@ -43,12 +43,16 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
             },
             {
               text: "Hermes Agent",
-              link: "/use-cases/hermes",  
+              link: "/use-cases/hermes",
             },
             {
               text: "Claude Code",
               link: "/use-cases/claude-code",
-            },                         
+            },
+            {
+              text: "Pool CLI",
+              link: "/use-cases/pool-cli",
+            },
             {
               text: "OpenCode",
               link: "/use-cases/opencode",
@@ -172,7 +176,7 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
             {
               text: "ACE-Step 1.5",
               link: "/use-cases/ace-step-1.5",
-            },            
+            },
             /*{
               text: "ACE-Step",
               link: "/use-cases/ace-step",
@@ -224,11 +228,11 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
             {
               text: "TradingAgents",
               link: "/use-cases/tradingagents",
-            },            
+            },
             {
               text: "TensorZero",
               link: "/use-cases/tensorzero",
-            },           
+            },
             // {
             //   text: "DeerFlow",
             //   link: "/use-cases/deerflow",
@@ -281,7 +285,7 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
           items: [
             {
               text: "Immich",
-              link: "/use-cases/immich",              
+              link: "/use-cases/immich",
               collapsed: true,
               items: [
                 {
@@ -330,7 +334,7 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
             {
               text: "*Arrs",
               link: "/use-cases/arrs",
-            },                        
+            },
           ]
         },
         {

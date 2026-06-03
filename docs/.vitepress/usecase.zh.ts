@@ -43,12 +43,16 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
             },
             {
               text: "Hermes Agent",
-              link: "/zh/use-cases/hermes", 
+              link: "/zh/use-cases/hermes",
             },
             {
               text: "Claude Code",
               link: "/zh/use-cases/claude-code",
-            },                        
+            },
+            {
+              text: "Pool CLI",
+              link: "/zh/use-cases/pool-cli",
+            },
             {
               text: "OpenCode",
               link: "/zh/use-cases/opencode",
@@ -148,7 +152,7 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
             {
               text: "Open Notebook",
               link: "/zh/use-cases/open-notebook",
-            },            
+            },
             // {
             //   text: "Dify",
             //   link: "/zh/use-cases/dify",
@@ -172,7 +176,7 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
             {
               text: "ACE-Step 1.5",
               link: "/zh/use-cases/ace-step-1.5",
-            },            
+            },
             /*{
               text: "ACE-Step",
               link: "/zh/use-cases/ace-step",
@@ -224,11 +228,11 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
             {
               text: "TradingAgents",
               link: "/zh/use-cases/tradingagents",
-            },             
+            },
             {
               text: "TensorZero",
               link: "/zh/use-cases/tensorzero",
-            },           
+            },
             // {
             //   text: "DeerFlow",
             //   link: "/zh/use-cases/deerflow",
@@ -280,7 +284,7 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
           items: [
             {
               text: "Immich",
-              link: "/zh/use-cases/immich",              
+              link: "/zh/use-cases/immich",
               collapsed: true,
               items: [
                 {
@@ -329,7 +333,7 @@ export const useCaseSidebar: DefaultTheme.Sidebar = {
             {
               text: "*Arrs",
               link: "/zh/use-cases/arrs",
-            },                        
+            },
           ]
         },
         {
