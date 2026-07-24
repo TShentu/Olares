@@ -104,26 +104,33 @@ To enable Intel Quick Sync Video (QSV) on Olares One:
 
 1. In Olares Market, update Jellyfin to version 1.0.21 or later.
 2. Navigate to **Settings** > **Applications** > **Jellyfin** > **Manage Environment Variables**.
-   - Set the `ENABLE_HW_ACCEL` variable to `true`.
-   - Enter the values for `VIDEO_GID` and `RENDER_GID` from your host system. For Olares One, these default to `44` and `994`. If you are using a different device, open the terminal from the **Control Hub** and run the following commands to check the correct values:
+   - Set `ENABLE_HW_ACCEL` to `true`.
+   - Set `VIDEO_GID` to `44`, and `RENDER_GID` to `994`. These GID values are the defaults for Olares One. 
+   On other devices, open Olares terminal from **Control Hub** and run:
       ```bash
       getent group video
       getent group render
       ls -ln /dev/dri
       ```
     ![Get GID](/images/manual/use-cases/jellyfin-gid.png#bordered){width=90%}
-   - After saving the settings, the system will automatically restart the Jellyfin container.
+3. Save the changes. Olares automatically restarts Jellyfin.
 
-3. In the Jellyfin **Dashboard** (click the ≡ icon > Dashboard), go to **Playback** > **Transcoding**.
-4. Under **Hardware acceleration**, select the appropriate options based on your Olares device's hardware. For example, on Olares One with Intel QSV, it is recommended to enable `H264`, `HEVC`, and `HEVC 10bit`, and keep the other options as default. For more detailed configuration guidance, refer to the official [Jellyfin transcoding docs](https://jellyfin.org/docs/general/post-install/transcoding/).
+4. In the Jellyfin **Dashboard**, go to **Playback** > **Transcoding**.
+5. Under **Hardware acceleration**, select the appropriate options based on your Olares device's hardware. For example, on Olares One:
+- Select **Intel QuickSync (QSV)**.
+- Enable hardware coding for `H264`, `HEVC`, and `HEVC 10bit`. 
+- Keep the other options at their default values. 
+
+Hardware capabilities vary by device. For configuration details, refer to the official [Jellyfin transcoding docs](https://jellyfin.org/docs/general/post-install/transcoding/).
 
    
    ![Enable transcoding](/images/manual/use-cases/jellyfin-transcoding.png#bordered){width=90%}
 
-:::tip Best Practices
-For a home theater setup, it's best to ensure your main TV or media player supports popular formats such as HEVC Main10, HDR10, SRT subtitles, and mainstream audio codecs. This allows Jellyfin to use Direct Play as much as possible, delivering media without unnecessary transcoding. Hardware acceleration and transcoding are intended to solve compatibility issues or support playback over remote or weak networks, not to replace Direct Play.
-
-Additionally, enabling `ENABLE_HW_ACCEL` gives Jellyfin extra permissions to access DRM. For security reasons, only enable this option when you actually need hardware acceleration.
+:::tip Best practices
+For a home theater setup, use a TV or media player that supports HEVC Main 10, HDR10, SRT subtitles, and common audio formats so Jellyfin can use Direct Play whenever possible. Hardware-accelerated transcoding is mainly intended to resolve format compatibility issues or improve playback over remote or bandwidth-limited networks. It should not replace Direct Play.
+:::
+::: warning Device access
+Enabling `ENABLE_HW_ACCEL` gives Jellyfin additional access to the host’s `/dev/dri` graphics devices. Enable this option only when hardware acceleration is needed.
 :::
 
 ## Enhance experience with community plugins
