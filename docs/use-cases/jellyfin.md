@@ -100,7 +100,7 @@ Hardware acceleration reduces CPU usage when Jellyfin needs to transcode video. 
 Jellyfin still prioritizes Direct Play and Remux. Hardware acceleration is used only when transcoding is required.
 
 
-Here’s how to enable Intel QSV hardware acceleration on an Olares One device:
+To enable Intel Quick Sync Video (QSV) on Olares One:
 
 1. First, update Jellyfin in the Olares Market to version 1.0.21 or above.
 2. Navigate to **Settings** > **Applications** > **Jellyfin** > **Manage Environment Variables**.
