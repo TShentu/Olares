@@ -117,9 +117,9 @@ To enable Intel Quick Sync Video (QSV) on Olares One:
 
 4. In the Jellyfin **Dashboard**, go to **Playback** > **Transcoding**.
 5. Under **Hardware acceleration**, select the appropriate options based on your Olares device's hardware. For example, on Olares One:
-- Select **Intel QuickSync (QSV)**.
-- Enable hardware coding for `H264`, `HEVC`, and `HEVC 10bit`. 
-- Keep the other options at their default values. 
+  - Select **Intel QuickSync (QSV)**.
+  - Enable hardware coding for `H264`, `HEVC`, and `HEVC 10bit`. 
+  - Keep the other options at their default values. 
 
 Hardware capabilities vary by device. For configuration details, refer to the official [Jellyfin transcoding docs](https://jellyfin.org/docs/general/post-install/transcoding/).
 
