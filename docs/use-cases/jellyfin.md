@@ -102,7 +102,7 @@ Jellyfin still prioritizes Direct Play and Remux. Hardware acceleration is used 
 
 To enable Intel Quick Sync Video (QSV) on Olares One:
 
-1. First, update Jellyfin in the Olares Market to version 1.0.21 or above.
+1. In Olares Market, update Jellyfin to version 1.0.21 or later.
 2. Navigate to **Settings** > **Applications** > **Jellyfin** > **Manage Environment Variables**.
    - Set the `ENABLE_HW_ACCEL` variable to `true`.
    - Enter the values for `VIDEO_GID` and `RENDER_GID` from your host system. For Olares One, these default to `44` and `994`. If you are using a different device, open the terminal from the **Control Hub** and run the following commands to check the correct values:
