@@ -95,7 +95,9 @@ Once saved, Jellyfin will automatically scan your folders and begin building you
 
 ## Enable hardware acceleration for transcoding 
 
-When you enable Jellyfin’s hardware acceleration, the server will use your CPU’s built-in GPU multimedia engine for video decoding, encoding, scaling, and certain tone mapping tasks when transcoding is needed. This reduces the load on the CPU compared to software-only decoding, and is especially useful for playing 4K high-bitrate sources, downscaling resolution or bitrate, handling media formats not supported by the client, converting HDR to SDR, or embedding subtitles. Note that by default, Jellyfin will prefer Direct Play or Remux; hardware acceleration is only used when the device is not compatible or network bandwidth is insufficient and transcoding is required.
+Hardware acceleration reduces CPU usage when Jellyfin needs to transcode video. Transcoding may be required when the client does not support the original format, the resolution or bitrate must be reduced, HDR content must be converted to SDR, or subtitles need to be burned into the video.
+
+Jellyfin still prioritizes Direct Play and Remux. Hardware acceleration is used only when transcoding is required.
 
 
 Here’s how to enable Intel QSV hardware acceleration on an Olares One device:
