@@ -50,14 +50,14 @@ Prometheus 安装完成后，再通过应用市场安装 Grafana。
 
 对于 Prometheus：
 
-1. 前往 Olares **Settings** > **Applications** > **Prometheus** > **Entrances**。
-2. 选择 **Prometheus API**，然后复制 **Endpoint** URL。例如：
+1. 前往 Olares **设置** > **应用** > **Prometheus** > **入口**。
+2. 选择 **Prometheus API**，然后复制 **端点** URL。例如：
     ```text
     https://4ae9f19e1.<olaresid>.olares.com
     ```
     将 `<olaresid>` 替换为你的 Olares ID。
 
-在 Grafana 中，将该 Endpoint 用作 **Prometheus server URL**。
+在 Grafana 中，将该端点用作 **Prometheus server URL**。
 
 ### 在 Grafana 中配置数据源
 
